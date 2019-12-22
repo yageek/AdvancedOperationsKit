@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		56EE63E323B0156D00D67EBD /* AdvancedOperationsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 56EE63E123B0156D00D67EBD /* AdvancedOperationsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56EE63EB23B015FC00D67EBD /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE63EA23B015FC00D67EBD /* Operation.swift */; };
+		56EE63EE23B019B200D67EBD /* OperationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE63ED23B019B200D67EBD /* OperationCondition.swift */; };
+		56EE63F023B01C3F00D67EBD /* OperationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE63EF23B01C3F00D67EBD /* OperationErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56EE63DE23B0156D00D67EBD /* AdvancedOperationsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvancedOperationsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EE63E123B0156D00D67EBD /* AdvancedOperationsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedOperationsKit.h; sourceTree = "<group>"; };
 		56EE63E223B0156D00D67EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56EE63EA23B015FC00D67EBD /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		56EE63ED23B019B200D67EBD /* OperationCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCondition.swift; sourceTree = "<group>"; };
+		56EE63EF23B01C3F00D67EBD /* OperationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +36,7 @@
 		56EE63D423B0156D00D67EBD = {
 			isa = PBXGroup;
 			children = (
-				56EE63E023B0156D00D67EBD /* AdvancedOperationsKit */,
+				56EE63E023B0156D00D67EBD /* Sources */,
 				56EE63DF23B0156D00D67EBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +49,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		56EE63E023B0156D00D67EBD /* AdvancedOperationsKit */ = {
+		56EE63E023B0156D00D67EBD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				56EE63EC23B0199D00D67EBD /* Conditions */,
+				56EE63E923B015D700D67EBD /* Operations */,
 				56EE63E123B0156D00D67EBD /* AdvancedOperationsKit.h */,
 				56EE63E223B0156D00D67EBD /* Info.plist */,
 			);
-			path = AdvancedOperationsKit;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		56EE63E923B015D700D67EBD /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				56EE63EA23B015FC00D67EBD /* Operation.swift */,
+				56EE63EF23B01C3F00D67EBD /* OperationErrors.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		56EE63EC23B0199D00D67EBD /* Conditions */ = {
+			isa = PBXGroup;
+			children = (
+				56EE63ED23B019B200D67EBD /* OperationCondition.swift */,
+			);
+			path = Conditions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -66,9 +91,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		56EE63DD23B0156D00D67EBD /* AdvancedOperationsKit */ = {
+		56EE63DD23B0156D00D67EBD /* AdvancedOperationsKit-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56EE63E623B0156D00D67EBD /* Build configuration list for PBXNativeTarget "AdvancedOperationsKit" */;
+			buildConfigurationList = 56EE63E623B0156D00D67EBD /* Build configuration list for PBXNativeTarget "AdvancedOperationsKit-iOS" */;
 			buildPhases = (
 				56EE63D923B0156D00D67EBD /* Headers */,
 				56EE63DA23B0156D00D67EBD /* Sources */,
@@ -79,7 +104,7 @@
 			);
 			dependencies = (
 			);
-			name = AdvancedOperationsKit;
+			name = "AdvancedOperationsKit-iOS";
 			productName = AdvancedOperationsKit;
 			productReference = 56EE63DE23B0156D00D67EBD /* AdvancedOperationsKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -95,6 +120,7 @@
 				TargetAttributes = {
 					56EE63DD23B0156D00D67EBD = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -111,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56EE63DD23B0156D00D67EBD /* AdvancedOperationsKit */,
+				56EE63DD23B0156D00D67EBD /* AdvancedOperationsKit-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EE63EB23B015FC00D67EBD /* Operation.swift in Sources */,
+				56EE63F023B01C3F00D67EBD /* OperationErrors.swift in Sources */,
+				56EE63EE23B019B200D67EBD /* OperationCondition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,12 +289,13 @@
 		56EE63E723B0156D00D67EBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AdvancedOperationsKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -273,8 +303,9 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.yageek.AdvancedOperationsKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = AdvancedOperationsKit;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,12 +314,13 @@
 		56EE63E823B0156D00D67EBD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AdvancedOperationsKit/Info.plist;
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -296,7 +328,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.yageek.AdvancedOperationsKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = AdvancedOperationsKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56EE63E623B0156D00D67EBD /* Build configuration list for PBXNativeTarget "AdvancedOperationsKit" */ = {
+		56EE63E623B0156D00D67EBD /* Build configuration list for PBXNativeTarget "AdvancedOperationsKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56EE63E723B0156D00D67EBD /* Debug */,
