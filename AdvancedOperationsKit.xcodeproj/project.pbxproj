@@ -11,15 +11,26 @@
 		56EE63EB23B015FC00D67EBD /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE63EA23B015FC00D67EBD /* Operation.swift */; };
 		56EE63EE23B019B200D67EBD /* OperationCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE63ED23B019B200D67EBD /* OperationCondition.swift */; };
 		56EE63F023B01C3F00D67EBD /* OperationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE63EF23B01C3F00D67EBD /* OperationErrors.swift */; };
+		56EF16CC23BAA515008A280C /* OperationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF16CB23BAA515008A280C /* OperationObserver.swift */; };
+		56EF16CE23BAA669008A280C /* BlockObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF16CD23BAA669008A280C /* BlockObserver.swift */; };
+		56EF16D023BAA6CA008A280C /* GroupOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF16CF23BAA6CA008A280C /* GroupOperation.swift */; };
+		56EF16D323BAA792008A280C /* OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF16D223BAA792008A280C /* OperationQueue.swift */; };
+		56EF16D523BAA8A5008A280C /* ExclusivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF16D423BAA8A5008A280C /* ExclusivityController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5645679423B811F4008C5FAF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		56EE63DE23B0156D00D67EBD /* AdvancedOperationsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AdvancedOperationsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56EE63E123B0156D00D67EBD /* AdvancedOperationsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvancedOperationsKit.h; sourceTree = "<group>"; };
 		56EE63E223B0156D00D67EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56EE63EA23B015FC00D67EBD /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		56EE63ED23B019B200D67EBD /* OperationCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCondition.swift; sourceTree = "<group>"; };
 		56EE63EF23B01C3F00D67EBD /* OperationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationErrors.swift; sourceTree = "<group>"; };
+		56EF16CB23BAA515008A280C /* OperationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationObserver.swift; sourceTree = "<group>"; };
+		56EF16CD23BAA669008A280C /* BlockObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockObserver.swift; sourceTree = "<group>"; };
+		56EF16CF23BAA6CA008A280C /* GroupOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupOperation.swift; sourceTree = "<group>"; };
+		56EF16D223BAA792008A280C /* OperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueue.swift; sourceTree = "<group>"; };
+		56EF16D423BAA8A5008A280C /* ExclusivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusivityController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +47,7 @@
 		56EE63D423B0156D00D67EBD = {
 			isa = PBXGroup;
 			children = (
+				5645679423B811F4008C5FAF /* README.md */,
 				56EE63E023B0156D00D67EBD /* Sources */,
 				56EE63DF23B0156D00D67EBD /* Products */,
 			);
@@ -52,6 +64,8 @@
 		56EE63E023B0156D00D67EBD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				56EF16D123BAA782008A280C /* Operation Queue */,
+				56EF16CA23BAA4EE008A280C /* Observers */,
 				56EE63EC23B0199D00D67EBD /* Conditions */,
 				56EE63E923B015D700D67EBD /* Operations */,
 				56EE63E123B0156D00D67EBD /* AdvancedOperationsKit.h */,
@@ -65,6 +79,7 @@
 			children = (
 				56EE63EA23B015FC00D67EBD /* Operation.swift */,
 				56EE63EF23B01C3F00D67EBD /* OperationErrors.swift */,
+				56EF16CF23BAA6CA008A280C /* GroupOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -75,6 +90,24 @@
 				56EE63ED23B019B200D67EBD /* OperationCondition.swift */,
 			);
 			path = Conditions;
+			sourceTree = "<group>";
+		};
+		56EF16CA23BAA4EE008A280C /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				56EF16CB23BAA515008A280C /* OperationObserver.swift */,
+				56EF16CD23BAA669008A280C /* BlockObserver.swift */,
+			);
+			path = Observers;
+			sourceTree = "<group>";
+		};
+		56EF16D123BAA782008A280C /* Operation Queue */ = {
+			isa = PBXGroup;
+			children = (
+				56EF16D223BAA792008A280C /* OperationQueue.swift */,
+				56EF16D423BAA8A5008A280C /* ExclusivityController.swift */,
+			);
+			path = "Operation Queue";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +190,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EF16D323BAA792008A280C /* OperationQueue.swift in Sources */,
 				56EE63EB23B015FC00D67EBD /* Operation.swift in Sources */,
+				56EF16D023BAA6CA008A280C /* GroupOperation.swift in Sources */,
+				56EF16D523BAA8A5008A280C /* ExclusivityController.swift in Sources */,
 				56EE63F023B01C3F00D67EBD /* OperationErrors.swift in Sources */,
 				56EE63EE23B019B200D67EBD /* OperationCondition.swift in Sources */,
+				56EF16CC23BAA515008A280C /* OperationObserver.swift in Sources */,
+				56EF16CE23BAA669008A280C /* BlockObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
